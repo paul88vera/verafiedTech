@@ -1,6 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
-import { Home } from "./pages/Home";
+import { Landing } from "./pages/Landing";
 import ErrorMessage from "./pages/ErrorMessage";
 
 export const router = createBrowserRouter([
@@ -13,9 +13,9 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Navigate to="/home" />,
+            element: <Navigate to="/landing" />,
           },
-          { path: "home", element: <Home /> },
+          { path: "landing", element: <Landing /> },
         ],
       },
     ],
