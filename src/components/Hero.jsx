@@ -1,37 +1,44 @@
-import { Link } from "react-router-dom";
-import owner from "../assets/VT_owner.png";
+import { IoIosArrowDown } from "react-icons/io";
 
-const Hero = () => {
-  const container =
-    "flex flex-col gap-8 justify-center items-center h-screen px-4 bg-hero-pattern";
+// eslint-disable-next-line react/prop-types
+const Hero = ({ containerStyle }) => {
   return (
-    <section id="landing" className={`${container}`}>
-      <h1 className="text-center">
-        Our website is in development until May 1st!
-      </h1>
-      <h2 className="text-center text-[1.2rem] md:text-[1.5rem]">
-        Come back for your Tech solutions and IT support in San Antonio, Texas!
-      </h2>
-      <div className="bg-white p-2 rounded-xl hover:bg-slate-300">
-        <Link
-          to="https://www.paulvera.com"
-          target="_blank"
-          className="flex flex-row justify-center items-center gap-2">
-          <img
-            src={owner}
-            alt="VERAfied Technologies Owner/CEO"
-            width="150px"
-          />
-          <div className="flex flex-col justify-center items-center px-4 ">
-            <div className="text-center text-[1.2rem] md:text-[1.5rem]">
-              You can contact me directly
+    <section
+      id="landing"
+      className={`${containerStyle} justify-center items-center bg-hero-pattern bg-bottom bg-no-repeat bg-cover items-flex-start w-screen lg:px-[8rem]`}>
+      <div className="flex flex-col text-center justify-center items-center w-full max-w-[1200px]">
+        <div className="flex flex-col text-center items-center gap-20 z-10 h-[85vh] justify-center">
+          <div>
+            <h1 className="flex flex-col text-[6rem] md:text-[8rem] font-black">
+              Grow your
               <br />
-              on my personal site.
-              <br />
-              www.paulvera.com
-            </div>
+              business
+            </h1>
+            <p className="border-green text-[3.5rem] md:text-[5rem] font-thin">
+              with <span>web design</span>
+            </p>
+            {/* !todo : this will need to be a separate component */}
+            {/* <span>
+              IT support
+            </span>
+            <span>
+              web development
+            </span>
+            <span>
+              SEO
+            </span>
+            <span>
+              accesibility
+            </span> */}
           </div>
-        </Link>
+        </div>
+
+        <a
+          href="#services"
+          className="flex flex-col text-center w-screen items-center gap-2 text-white hover:text-white hover:bg-black/5 ease-in-out duration-500">
+          <p className="font-light">Our Services</p>
+          <IoIosArrowDown className="text-[30px] animate-bounce" />
+        </a>
       </div>
     </section>
   );
