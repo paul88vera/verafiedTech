@@ -1,4 +1,5 @@
 import { IoIosArrowDown } from "react-icons/io";
+import { ServiceCarousel } from "./ServiceCarousel";
 
 // eslint-disable-next-line react/prop-types
 const Hero = ({ containerStyle }) => {
@@ -14,9 +15,10 @@ const Hero = ({ containerStyle }) => {
               <br />
               business
             </h1>
-            <p className="border-green text-[3.5rem] md:text-[5rem] font-thin">
-              with <span>web design</span>
-            </p>
+            <div className="border-green text-[3.5rem] md:text-[5rem] font-thin flex flex-row gap-4 items-center justify-center">
+              <span className="text-[2.5rem] md:text-[5rem]">with</span>
+              <ServiceCarousel />
+            </div>
             {/* !todo : this will need to be a separate component */}
             {/* <span>
               IT support
@@ -36,7 +38,7 @@ const Hero = ({ containerStyle }) => {
         <a
           href="#services"
           className="flex flex-col text-center w-screen items-center gap-2 text-white hover:text-white hover:bg-black/5 ease-in-out duration-500">
-          <p className="font-light">Our Services</p>
+          <p className="font-thin text-[1.2rem]">Check out our services!</p>
           <IoIosArrowDown className="text-[30px] animate-bounce" />
         </a>
       </div>

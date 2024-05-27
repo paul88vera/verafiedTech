@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes turnService {
+  0% {
+    opacity: 1;
+    scale: 100%;
+  }
+  50% {
+    opacity: 0;
+    scale: 0%;
+  }
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.turnService {
+  animation: turnService 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
 html {
   scroll-behavior: smooth;
 }
