@@ -1,4 +1,4 @@
-import { Navigate, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import { Landing } from "./pages/Landing";
 import ErrorMessage from "./pages/ErrorMessage";
@@ -13,9 +13,9 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Navigate to="/landing" />,
+            element: <Landing />,
           },
-          { path: "landing", element: <Landing /> },
+          // { path: "/", element: <Landing /> },
         ],
       },
     ],
