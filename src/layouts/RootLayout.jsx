@@ -1,5 +1,6 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import { Navbar } from "../layouts/Navbar";
+import { Navbar } from "../components/Navbar";
+import Footer from "../components/Footer";
 
 // eslint-disable-next-line react/prop-types
 const RootLayout = () => {
@@ -10,6 +11,7 @@ const RootLayout = () => {
       <div>
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 };

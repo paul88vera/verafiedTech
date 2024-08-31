@@ -3,7 +3,7 @@ import logo from "../assets/VT_logo_new.png";
 // import Contact from "../components/Contact";
 
 export const Navbar = () => {
-  const linkStyle = "text-white text-[1rem] md:text-[1.2rem]";
+  const linkStyle = "text-white text-[.8rem] md:text-[1.2rem]";
 
   return (
     <div className="w-screen h-[10vh] fixed top-0 p-4 md:py-8 md:px-8 flex flex-row justify-between items-center box-border z-50 antialiased">
