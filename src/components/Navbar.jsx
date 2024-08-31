@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/VT_logo_new.png";
-// import Contact from "../components/Contact";
 
 export const Navbar = () => {
   const linkStyle = "text-white text-[.8rem] md:text-[1.2rem]";
@@ -27,7 +26,6 @@ export const Navbar = () => {
             className={`${linkStyle} py-2 px-4 rounded-full hover:text-white bg-[--accent-purple-color] hover:bg-[--accent-green-color]`}>
             Contact Us
           </Link>
-          {/* <Contact linkStyle={linkStyle} /> */}
         </li>
       </ul>
     </div>
