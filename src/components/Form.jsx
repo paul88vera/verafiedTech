@@ -6,7 +6,7 @@ const Contact = ({ linkStyle, containerStyle }) => {
   return (
     <form
       id="contact"
-      className={`${containerStyle} justify-center items-center`}>
+      className={`${containerStyle} justify-center items-center snap-center`}>
       <Link to={`mailto:${email}`} className={`text-white ${linkStyle}`}>
         Contact Us
       </Link>

@@ -9,10 +9,9 @@ export const Services = ({ containerStyle }) => {
 
   // Duplicate styles for elements
   const divStyle =
-    "flex flex-col items-center justify-center px-8 snap-center ease-in-out duration-500";
-  const iconStyle = "text-[4rem] text-gray-300 ";
-  const h4Style =
-    "text-[2rem] text-[--accent-green-color] select-none font-semibold text-center pb-4";
+    "flex flex-col items-center justify-center px-10 ease-in-out duration-500 w-full md:w-[33.3%] hover:w-[100%] h-[900px] hover:bg-[--accent-green-color] hover:text-white";
+  const iconStyle = "text-[4rem] text-gray-300";
+  const h4Style = "text-[2rem] select-none font-semibold text-center pb-4";
 
   // Services Icons
   const computerIcon = <FaComputer className={`${iconStyle}`} />;
@@ -32,6 +31,7 @@ export const Services = ({ containerStyle }) => {
         "We take care of your website edits for you.",
         "Cost efficient and quick development!",
       ],
+      color: "bg-red-900",
     },
     {
       name: "WEB DEVELOPMENT",
@@ -43,6 +43,7 @@ export const Services = ({ containerStyle }) => {
         "We take care of your website edits for you.",
         "Cost efficient and quick development!",
       ],
+      color: "bg-blue-900",
     },
     {
       name: "WEB HOSTING",
@@ -54,6 +55,7 @@ export const Services = ({ containerStyle }) => {
         "We take care of your website edits for you.",
         "Cost efficient and quick development!",
       ],
+      color: "bg-orange-900",
     },
     {
       name: "SEO ANALYSIS",
@@ -65,24 +67,28 @@ export const Services = ({ containerStyle }) => {
         "We take care of your website edits for you.",
         "Cost efficient and quick development!",
       ],
+      color: "bg-yellow-900",
     },
   ];
 
-  //! TODO need to stylize Service Cards!!!
   return (
     <div
       id="services"
-      className={`${containerStyle} h-[80svh] pt-0 w-full justify-center filter-[blur(10px)] sm:mt-[10rem]`}>
-      <div className="flex xl:flex-row items-center justify-around gap-[10rem] md:gap-20 overflow-y-hidden lg:overflow-x-hidden ml-[22%] mr-[22%] lg:mr-0 lg:ml-0 p-20">
+      className={`${containerStyle} pt-0 justify-center filter-[blur(10px)] sm:mt-[10rem] snap-center`}>
+      <div className="flex xl:flex-row w-screen items-center justify-between overflow-y-hidden lg:overflow-x-hidden snap-x snap-mandatory">
         {serviceDataArr.map((data, index) => (
-          <div className={`${divStyle}`} key={index}>
+          <div
+            className={`${divStyle}`}
+            key={index}
+            onMouseEnter={() => {
+              <button onClick={() => setOpenService(index - 1)}>
+                Learn More
+              </button>;
+            }}>
             {data.icon}
             <h4 className={`${h4Style}`}>{data.name}</h4>
             {!openService && (
-              <button
-                onClick={() => (
-                  setOpenService(index - 1), console.log("clicked to open")
-                )}>
+              <button onClick={() => setOpenService(index - 1)}>
                 Learn More
               </button>
             )}
@@ -91,9 +97,7 @@ export const Services = ({ containerStyle }) => {
                 id={index}
                 name={data.name}
                 desc={data.desc}
-                onClose={() => (
-                  setOpenService(false), console.log("clicked to close")
-                )}
+                onClose={() => setOpenService(false)}
               />
             )}
           </div>

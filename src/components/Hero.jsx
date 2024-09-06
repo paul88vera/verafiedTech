@@ -6,8 +6,8 @@ const Hero = ({ containerStyle }) => {
   return (
     <section
       id="landing"
-      className={`${containerStyle} justify-center items-center bg-hero-pattern bg-bottom bg-no-repeat bg-cover items-flex-start w-screen lg:px-[8rem]`}>
-      <div className="flex flex-col text-center justify-center items-center w-full max-w-[1200px]">
+      className={`${containerStyle} justify-center items-center bg-hero-pattern bg-bottom bg-no-repeat bg-cover items-flex-start w-screen lg:px-[8rem] snap-center`}>
+      <div className="flex flex-col text-center justify-center items-center w-full max-w-[1200px] select-none">
         <div className="flex flex-col text-center items-center gap-20 z-10 h-[85vh] justify-center">
           <div>
             <h1 className="flex flex-col text-[6rem] md:text-[8rem] font-black">
@@ -19,19 +19,6 @@ const Hero = ({ containerStyle }) => {
               <span className="text-[2.5rem] md:text-[5rem]">with</span>
               <ServiceCarousel />
             </div>
-            {/* !todo : this will need to be a separate component */}
-            {/* <span>
-              IT support
-            </span>
-            <span>
-              web development
-            </span>
-            <span>
-              SEO
-            </span>
-            <span>
-              accesibility
-            </span> */}
           </div>
         </div>
 
