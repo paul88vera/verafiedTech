@@ -25,49 +25,29 @@ export const Services = ({ containerStyle }) => {
       name: "IT SUPPORT",
       icon: headsetIcon,
       image: "",
-      desc: [
-        "We create your design to your vision and branding.",
-        "Let our devs be your subject matter experts.",
-        "We take care of your website edits for you.",
-        "Cost efficient and quick development!",
-      ],
       color: "bg-red-900",
+      vid: "IT",
     },
     {
       name: "WEB DEVELOPMENT",
       icon: computerIcon,
       image: "",
-      desc: [
-        "We create your design to your vision and branding.",
-        "Let our devs be your subject matter experts.",
-        "We take care of your website edits for you.",
-        "Cost efficient and quick development!",
-      ],
       color: "bg-blue-900",
+      vid: "WebDev",
     },
     {
       name: "WEB HOSTING",
       icon: serverIcon,
       image: "",
-      desc: [
-        "We create your design to your vision and branding.",
-        "Let our devs be your subject matter experts.",
-        "We take care of your website edits for you.",
-        "Cost efficient and quick development!",
-      ],
       color: "bg-orange-900",
+      vid: "Hosting",
     },
     {
       name: "SEO ANALYSIS",
       icon: seoIcon,
       image: "",
-      desc: [
-        "We create your design to your vision and branding.",
-        "Let our devs be your subject matter experts.",
-        "We take care of your website edits for you.",
-        "Cost efficient and quick development!",
-      ],
       color: "bg-yellow-900",
+      vid: "SEO",
     },
   ];
 
@@ -95,8 +75,7 @@ export const Services = ({ containerStyle }) => {
             {openService === index - 1 && (
               <Card
                 id={index}
-                name={data.name}
-                desc={data.desc}
+                vid={data.vid}
                 onClose={() => setOpenService(false)}
               />
             )}

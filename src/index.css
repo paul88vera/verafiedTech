@@ -50,11 +50,11 @@ html {
   left: 10px;
   width: calc(100vw - 20px);
   height: calc(100vh - 110px);
-  background-color: #242424fc;
+  /* background-color: #1c1d1d; */
   color: var(--accent-green-color);
   padding: 2em;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px #63636357;
+  /* box-shadow: 0px 0px 10px #63636357; */
   transition: all 0.2s ease-in-out;
 }
 
