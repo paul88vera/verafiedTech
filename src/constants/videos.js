@@ -1,7 +1,7 @@
-import WebDev from "./WedDev.mp4";
-import Hosting from "./WedDev.mp4";
-import SEO from "./WedDev.mp4";
-import IT from "./WedDev.mp4";
+import WebDev from "./WedDev.webm";
+import Hosting from "./WedDev.webm";
+import SEO from "./WedDev.webm";
+import IT from "./WedDev.webm";
 
 export const Videos = {
   WebDev,
